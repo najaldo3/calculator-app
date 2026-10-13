@@ -1,3 +1,4 @@
+
 package com.student;
 
 import java.util.logging.Handler;
@@ -16,15 +17,19 @@ public class AppTest {
 
         Handler handler = new Handler() {
             @Override
-            public void publish(LogRecord record) {
-                output.append(record.getMessage());
+            public void publish(LogRecord logRecord) {
+                output.append(logRecord.getMessage());
             }
 
             @Override
-            public void flush() {}
+            public void flush() {
+                // No buffering is used, so flushing is unnecessary.
+            }
 
             @Override
-            public void close() {}
+            public void close() {
+                // No resources need to be closed.
+            }
         };
 
         logger.addHandler(handler);
