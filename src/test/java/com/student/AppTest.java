@@ -13,8 +13,8 @@ public class AppTest {
         PrintStream originalOut = System.out;
         ByteArrayOutputStream output = new ByteArrayOutputStream();
 
-        try {
-            System.setOut(new PrintStream(output));
+        try (PrintStream testOut = new PrintStream(output)) {
+            System.setOut(testOut);
 
             App.main(new String[]{});
 
