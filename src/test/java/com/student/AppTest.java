@@ -41,4 +41,8 @@ public class AppTest {
             logger.removeHandler(handler);
         }
     }
+    @Test
+void testAppConstructor() {
+    new App();
+}
 }
