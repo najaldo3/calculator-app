@@ -9,7 +9,7 @@ import org.junit.jupiter.api.Test;
 public class AppTest {
 
     @Test
-    public void testMain() {
+  void testMain() {
         PrintStream originalOut = System.out;
         ByteArrayOutputStream output = new ByteArrayOutputStream();
 
