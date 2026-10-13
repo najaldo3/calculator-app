@@ -1,13 +1,13 @@
 package com.student;
 
-/**
- * Hello world!
- *
- */
-public class App 
-{
-    public static void main( String[] args )
-    {
-        System.out.println( "Hello World!" );
+import java.util.logging.Logger;
+
+public class App {
+
+    private static final Logger logger =
+            Logger.getLogger(App.class.getName());
+
+    public static void main(String[] args) {
+        logger.info("Hello World!");
     }
 }
