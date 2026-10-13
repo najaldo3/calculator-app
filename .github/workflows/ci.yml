@@ -28,6 +28,10 @@ jobs:
       - name: Run tests
         run: mvn -B test
 
+      - name: SonarQube analysis
+        env:
+          SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
+        run: mvn -B sonar:sonar -Dsonar.projectKey=najaldo3_calculator-app
       - name: Package application
         run: mvn -B package -DskipTests
 
