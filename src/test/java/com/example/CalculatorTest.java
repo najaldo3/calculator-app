@@ -9,17 +9,17 @@ public class CalculatorTest {
     Calculator calc = new Calculator();
 
     @Test
-    public void testAdditionPositive() {
+     void testAdditionPositive() {
         assertEquals(5, calc.add(2, 3));
     }
 
     @Test
-    public void testAdditionWithZero() {
+     void testAdditionWithZero() {
         assertEquals(7, calc.add(7, 0));
     }
 
     @Test
-    public void testAdditionNegative() {
+    void testAdditionNegative() {
         assertEquals(-8, calc.add(-3, -5));
     }
 }
